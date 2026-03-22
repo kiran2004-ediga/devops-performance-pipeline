@@ -15,7 +15,7 @@
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
-          <intProp name="LoopController.loops">-1</intProp>
+          <stringProp name="LoopController.loops">50</stringProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
       </ThreadGroup>
@@ -80,6 +80,7 @@
             <collectionProp name="collector.labels">
               <stringProp name="102727412">label</stringProp>
               <stringProp name="3059181">code</stringProp>
+              <stringProp name="-896505829">source</stringProp>
             </collectionProp>
             <stringProp name="collector.quantiles_or_buckets">0.75,0.5|0.95,0.1|0.99,0.01</stringProp>
             <stringProp name="listener.collector.listen_to">samples</stringProp>
@@ -92,6 +93,7 @@
             <collectionProp name="collector.labels">
               <stringProp name="102727412">label</stringProp>
               <stringProp name="3059181">code</stringProp>
+              <stringProp name="-896505829">source</stringProp>
             </collectionProp>
             <stringProp name="collector.quantiles_or_buckets"></stringProp>
             <stringProp name="listener.collector.listen_to">samples</stringProp>
