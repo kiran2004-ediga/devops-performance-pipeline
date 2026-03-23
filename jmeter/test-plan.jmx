@@ -10,9 +10,13 @@
     </TestPlan>
     <hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
+        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
         <intProp name="ThreadGroup.num_threads">10</intProp>
         <intProp name="ThreadGroup.ramp_time">5</intProp>
-        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <longProp name="ThreadGroup.duration">300</longProp>
+        <longProp name="ThreadGroup.delay">0</longProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
           <stringProp name="LoopController.loops">50</stringProp>
@@ -20,7 +24,7 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request">
           <stringProp name="HTTPSampler.domain">localhost</stringProp>
           <stringProp name="HTTPSampler.port">5000</stringProp>
           <stringProp name="HTTPSampler.path">/load</stringProp>
@@ -33,7 +37,7 @@
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree/>
-        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
@@ -87,16 +91,14 @@
             <stringProp name="listener.collector.measuring">ResponseTime</stringProp>
           </elementProp>
           <elementProp name="" elementType="com.github.johrstrom.listener.ListenerCollectorConfig">
-            <stringProp name="collector.help">Success and failure ratio</stringProp>
+            <stringProp name="collector.help">label,code</stringProp>
             <stringProp name="collector.metric_name">Ratio</stringProp>
             <stringProp name="collector.type">SUCCESS_RATIO</stringProp>
             <collectionProp name="collector.labels">
               <stringProp name="102727412">label</stringProp>
               <stringProp name="3059181">code</stringProp>
-              <stringProp name="-896505829">source</stringProp>
             </collectionProp>
             <stringProp name="collector.quantiles_or_buckets"></stringProp>
-            <stringProp name="listener.collector.listen_to">samples</stringProp>
             <stringProp name="listener.collector.measuring">SuccessRatio</stringProp>
           </elementProp>
         </collectionProp>
