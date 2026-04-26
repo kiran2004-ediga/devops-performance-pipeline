@@ -46,7 +46,7 @@ HTML_TEMPLATE = """
 </head>
 <body>
     <div class="container">
-        <h1>🚀 DevOps Performance Pipeline 🚀</h1>
+        <h1>🚀 DevOps Performance Pipeline </h1>
         <p>This app is used for performance testing using JMeter, Prometheus, and Grafana.</p>
         <button class="btn" onclick="window.location.href='/load'">
             Test Load Endpoint
